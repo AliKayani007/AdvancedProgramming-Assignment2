@@ -1,0 +1,39 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000, #1c1c1c);
+    color: #c0c0c0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(46, 139, 87, 0.15);
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 10px #d4af37;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+  }
+  
+  .desc {
+    margin: 20px 0;
+    color: #ccc;
+    font-style: italic;
+  }
+  
+  .link {
+    color: #4169e1;
+    text-decoration: underline;
+  }
+  
+  .link:hover {
+    color: #d4af37;
+  }
+  

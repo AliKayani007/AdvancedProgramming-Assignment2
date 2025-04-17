@@ -1,0 +1,35 @@
+.container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #000, #1c1c1c);
+    color: #c0c0c0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: rgba(46, 139, 87, 0.1);
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .bio {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  

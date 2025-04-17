@@ -1,0 +1,39 @@
+.container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #000, #1c1c1c);
+    color: #c0c0c0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+  }
+  
+  .content {
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .links a {
+    color: #4169e1;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .links a:hover {
+    color: #d4af37;
+  }
+  

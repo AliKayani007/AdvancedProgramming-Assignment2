@@ -1,0 +1,56 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000, #2e2e2e);
+    color: #c0c0c0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filter {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .filter select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: rgba(46, 139, 87, 0.15);
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #d4af37;
+    cursor: pointer;
+  }
+  

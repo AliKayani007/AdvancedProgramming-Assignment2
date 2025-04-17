@@ -1,0 +1,66 @@
+/* styles/Home.module.css */
+
+.container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #800020, #000); /* burgundy to black */
+    color: #c0c0c0; /* silver */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .header {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d4af37; /* gold */
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: #4169e1; /* royal blue */
+    margin-bottom: 2rem;
+  }
+  
+  .movieGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: rgba(46, 139, 87, 0.2); /* emerald tint */
+    border: 1px solid #d4af37;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #d4af37;
+  }
+  
+  .button {
+    margin-top: 40px;
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #f0d36f;
+  }
+  
