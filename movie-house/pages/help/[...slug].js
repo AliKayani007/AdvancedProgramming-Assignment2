@@ -4,7 +4,6 @@ import Link from 'next/link';
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: [] } }, // /help
       { params: { slug: ['faqs'] } },
       { params: { slug: ['contact'] } },
       { params: { slug: ['privacy'] } },
