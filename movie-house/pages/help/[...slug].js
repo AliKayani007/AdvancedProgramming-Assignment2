@@ -8,7 +8,7 @@ export async function getStaticPaths() {
       { params: { slug: ['contact'] } },
       { params: { slug: ['privacy'] } },
     ],
-    fallback: false, // All help pages are pre-built
+    fallback: false, 
   };
 }
 

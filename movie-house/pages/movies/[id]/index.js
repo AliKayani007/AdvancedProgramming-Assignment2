@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking', // on-demand page generation
+    fallback: 'blocking', 
   };
 }
 
