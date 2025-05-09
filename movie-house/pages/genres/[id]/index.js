@@ -1,10 +1,28 @@
-import fs from 'fs';
-import path from 'path';
+/* import fs from 'fs';
+import path from 'path'; */
 import styles from '../../../styles/GenreDetail.module.css';
 import Link from 'next/link';
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
+
+  const res = await fetch(`http://localhost:3000/api/genres/${id}/movies`);
+  const movies = await res.json();
+
+  // Optional: fetch genre name (like you did before)
+  const genreRes = await fetch('http://localhost:3000/api/genres');
+  const genres = await genreRes.json();
+  const genre = genres.find((g) => g.id === id);
+
+  if (!genre) return { notFound: true };
+
+  return {
+    props: {
+      genre,
+      movies,
+    },
+  };
+  /* const { id } = context.params;
   const filePath = path.join(process.cwd(), 'data', 'movies.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(jsonData);
@@ -23,7 +41,7 @@ export async function getServerSideProps(context) {
       genre,
       movies,
     },
-  };
+  }; */
 }
 
 export default function GenreDetail({ genre, movies }) {

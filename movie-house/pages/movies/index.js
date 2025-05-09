@@ -1,11 +1,22 @@
 import { useState } from 'react';
-import fs from 'fs';
-import path from 'path';
+/* import fs from 'fs';
+import path from 'path'; */
 import styles from '../../styles/Movies.module.css';
 import Link from 'next/link';
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'data', 'movies.json');
+  const movieRes = await fetch('http://localhost:3000/api/movies');
+  const genreRes = await fetch('http://localhost:3000/api/genres');
+
+  const movies = await movieRes.json();
+  const genres = await genreRes.json();
+
+  return {
+    props: { movies, genres },
+    revalidate: 60,
+  };
+
+  /* const filePath = path.join(process.cwd(), 'data', 'movies.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(jsonData);
 
@@ -15,7 +26,7 @@ export async function getStaticProps() {
       genres: data.genres,
     },
     revalidate: 10,
-  };
+  }; */
 }
 
 export default function Movies({ movies, genres }) {

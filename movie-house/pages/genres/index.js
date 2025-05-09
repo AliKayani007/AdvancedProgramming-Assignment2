@@ -1,10 +1,16 @@
-import fs from 'fs';
-import path from 'path';
+/* import fs from 'fs';
+import path from 'path'; */
 import Link from 'next/link';
 import styles from '../../styles/Genres.module.css';
 
 export async function getServerSideProps() {
-  const filePath = path.join(process.cwd(), 'data', 'movies.json');
+  const res = await fetch('http://localhost:3000/api/genres');
+  const genres = await res.json();
+
+  return {
+    props: { genres },
+  };
+  /* const filePath = path.join(process.cwd(), 'data', 'movies.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(jsonData);
 
@@ -12,7 +18,7 @@ export async function getServerSideProps() {
     props: {
       genres: data.genres,
     },
-  };
+  }; */
 }
 
 export default function Genres({ genres }) {

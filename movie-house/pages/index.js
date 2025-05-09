@@ -1,10 +1,21 @@
 import { useRouter } from 'next/router';
-import fs from 'fs';
-import path from 'path';
+/* import fs from 'fs';
+import path from 'path'; */
 import styles from '../styles/Home.module.css';
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'data', 'movies.json');
+  const res = await fetch('http://localhost:3000/api/movies');
+  const allMovies = await res.json();
+
+  const trending = [...allMovies]
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 3);
+
+  return {
+    props: { trending },
+    revalidate: 60, // ISR
+  };
+  /* const filePath = path.join(process.cwd(), 'data', 'movies.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(jsonData);
 
@@ -15,7 +26,7 @@ export async function getStaticProps() {
   return {
     props: { trending },
     revalidate: 10,
-  };
+  }; */
 }
 
 export default function Home({ trending }) {
